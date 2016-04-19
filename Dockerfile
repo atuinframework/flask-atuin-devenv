@@ -22,6 +22,7 @@ COPY ./start.sh /var/uwsgi-commands
 
 WORKDIR /var/uwsgi
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 ENV ADDITIONAL_ARGUMENTS="--http 0.0.0.0:9001 --callable=app"
