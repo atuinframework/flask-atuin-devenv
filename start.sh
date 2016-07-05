@@ -5,4 +5,6 @@ set +e
 echo "=== Applying pending migrations..."
 ./initdb.py db upgrade
 echo "=== Starting development server..."
-./dev.py external
+#./dev.py external
+gunicorn handler:app
+
