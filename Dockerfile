@@ -1,6 +1,6 @@
 # vim:set ft=dockerfile:
 
-# LOCAL DEVEL Dockerfile Test uWSGI
+# LOCAL DEVELOPMENT Dockerfile Test uWSGI
 
 FROM blowb/uwsgi:python2
 
