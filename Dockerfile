@@ -2,21 +2,23 @@
 
 # LOCAL DEVELOPMENT Dockerfile Test uWSGI
 
-FROM blowb/uwsgi:python2
+FROM python:2
 
-MAINTAINER Paolo Casciello <paolo.casciello@scalebox.it>
+LABEL maintainer="Paolo Casciello <paolo.casciello@scalebox.it>"
 
 RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libxslt1-dev
 
-COPY ./requirements.txt /var/uwsgi/
+RUN mkdir -vp /var/wsgi
 
-RUN mkdir -vp /var/uwsgi-commands
+COPY ./requirements.txt /var/wsgi/
+
+RUN mkdir -vp /var/wsgi-commands
 
 COPY ./start.sh /var/uwsgi-commands
 
-WORKDIR /var/uwsgi
+WORKDIR /var/wsgi
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
@@ -25,4 +27,4 @@ ENV ADDITIONAL_ARGUMENTS="--http 0.0.0.0:9001 --callable=app"
 
 ENV WSGI_MODULE="handler"
 
-CMD ["/var/uwsgi-commands/start.sh"]
+CMD ["/var/wsgi-commands/start.sh"]
