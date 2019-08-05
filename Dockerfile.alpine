@@ -2,13 +2,9 @@
 
 # LOCAL DEVELOPMENT Dockerfile Test uWSGI
 
-FROM python:2
+FROM python:2-alpine
 
 LABEL maintainer="Paolo Casciello <paolo.casciello@scalebox.it>"
-
-RUN apt-get update && apt-get install -y \
-    libxml2-dev \
-    libxslt1-dev
 
 RUN mkdir -vp /var/wsgi
 
