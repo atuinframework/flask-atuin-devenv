@@ -16,15 +16,8 @@ COPY ./requirements.txt /var/wsgi/
 
 RUN mkdir -vp /var/wsgi-commands
 
-COPY ./start.sh /var/uwsgi-commands
+COPY ./start.sh /var/wsgi-commands
 
 WORKDIR /var/wsgi
-
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-ENV ADDITIONAL_ARGUMENTS="--http 0.0.0.0:9001 --callable=app"
-
-ENV WSGI_MODULE="handler"
 
 CMD ["/var/wsgi-commands/start.sh"]
