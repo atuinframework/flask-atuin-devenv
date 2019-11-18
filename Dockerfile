@@ -2,7 +2,7 @@
 
 # LOCAL DEVELOPMENT Dockerfile Test uWSGI
 
-FROM python:2
+FROM python:3
 
 LABEL maintainer="Paolo Casciello <paolo.casciello@scalebox.it>"
 
