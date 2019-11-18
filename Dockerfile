@@ -1,6 +1,6 @@
 # vim:set ft=dockerfile:
 
-# LOCAL DEVELOPMENT Dockerfile Test uWSGI
+# LOCAL DEVELOPMENT
 
 FROM python:3
 
