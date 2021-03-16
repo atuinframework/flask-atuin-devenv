@@ -1,4 +1,4 @@
-# Flask Atuin development environment: flask-atuin-devenv
+# Flask Atuin Python3 development environment: flask-atuin-devenv
 
 This docker container is meant to be used as the development environment for the [SCALEBOX]'s [Flask Atuin] framework.
 
@@ -19,7 +19,7 @@ Atuin is free to use for all.
 This development environment is handy to quick start any project based on the [Flask Atuin] Web Framework. Basically, it just starts a web server for the local development.
 
 **It's highly recommended to use this container through the execution of the complete development environment
-of Flask Atuin also made up by the [atuin-tools] container.**
+of Flask Atuin alongside the [atuin-tools] container.**
 
 Look at [Flask Atuin] for more information. 
 
